@@ -3,6 +3,6 @@
 echo "----> Welcome to JRE build pack"
 echo "Extracting jre..."
 BUILD_DIR=$1
-curl http://radiocuatoi.github.io/jre.tar > bin/jre.tar
+curl https://radiocuatoi.github.io/jre.tar > bin/jre.tar
 tar -xf bin/jre.tar -C $BUILD_DIR
 echo "Finished extracting JRE"
