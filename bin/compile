@@ -3,6 +3,8 @@
 echo "----> Welcome to JRE build pack"
 echo "Extracting jre..."
 BUILD_DIR=$1
-curl https://github.com/radiocuatoi/heroku-buildpack-sun-jre/releases/download/1.7_u67/jre.tar.gz > bin/jre.tar
+DOWNLOAD_URL=https://github.com/radiocuatoi/heroku-buildpack-sun-jre/releases/download/1.7_u67/jre.tar.gz
+echo "Downloading JRE from $DOWNLOAD_URL"
+curl -Lo --silent bin/jre.tar $DOWNLOAD_URL
 tar -xf bin/jre.tar -C $BUILD_DIR
 echo "Finished extracting JRE"
